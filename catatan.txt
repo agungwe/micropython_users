@@ -1,0 +1,22 @@
+Note Setup Python:
+- Run Script: python -m venv virtualenvi --> merupakan folder library kita
+- Run Script: virtualenvi\Scripts\activate 
+- Run Script: python -m pip install --upgrade pip
+- buat file req.txt > jalankan Scirpt untuk install tools: "pip install -r req.txt"
+- Jalanlan project: flask run
+
+Migration DB:
+- Run Script: flask db init
+- flask db upgrade
+
+# Untuk membuat tabel baru ke DB
+- flask db migrate -m "todo files"
+- flask db upgrade
+
+Melihat Instalasi di Aplikasi:
+- pip list
+
+Untuk Jalankan Worker Redis Queue:
+- Tambah atau buat 2 Terminal,
+- Jalankan script deri terminal: "rq worker",
+- Jalankan juga Flask Run.
