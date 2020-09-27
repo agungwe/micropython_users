@@ -1,11 +1,11 @@
-FROM python:3.8.5-alpine
+FROM python:3
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
-COPY . ./
+COPY req.txt ./
 
-ADD . /app
+RUN pip install --no-cache-dir -r req.txt
 
-RUN pip install -r req.txt
+COPY . .
 
 CMD ["flask","run"]
